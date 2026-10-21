@@ -17,6 +17,17 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Serif+SC:wght@600;700&amp;display=swap" rel="stylesheet">
 <script>
+    // 防检查：拦截右键与常见查看源代码的快捷键（仅防普通用户，无法彻底阻止）
+    document.addEventListener('contextmenu', function (e) { e.preventDefault(); });
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'F12') { e.preventDefault(); return; }
+        if ((e.ctrlKey || e.metaKey) && !e.altKey) {
+            const k = (e.key || '').toUpperCase();
+            if (['U', 'S', 'P', 'I', 'J', 'C'].indexOf(k) >= 0) e.preventDefault();
+        }
+    });
+</script>
+<script>
     tailwind.config = {
         theme: {
             extend: {
