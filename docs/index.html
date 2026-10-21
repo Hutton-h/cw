@@ -473,7 +473,7 @@
 
     <div class="flex items-center justify-between text-xs text-muted mb-6">
         <span>按当地时间 9:00–18:00 判定工作状态</span>
-        <span id="result-line">共 210 个地区</span>
+        <span id="result-line">共 232 个地区</span>
     </div>
 
     <!-- 网格 -->
@@ -4683,7 +4683,7 @@
     <section class="mt-12 pt-6 border-t border-line grid grid-cols-1 sm:grid-cols-3 gap-3">
         <div class="flex items-center gap-2.5 text-sm text-muted">
             <i class="fa fa-globe text-accent w-5 text-center"></i>
-            <span>全球 <b class="text-ink font-semibold">210</b> 个国家和地区 · 实时时间与天气</span>
+            <span>全球 <b class="text-ink font-semibold">232</b> 个国家和地区 · 实时时间与天气</span>
         </div>
         <div class="flex items-center gap-2.5 text-sm text-muted">
             <i class="fa fa-clock-o text-accent w-5 text-center"></i>
@@ -4704,7 +4704,7 @@
                 <span class="font-semibold text-lg text-ink">SKPL-LIFT</span>
                 <span class="text-xs text-muted">全球时钟与天气</span>
             </div>
-            <p class="text-sm text-muted max-w-md leading-relaxed">实时查看全球 210 个国家和地区的当地时间与天气。</p>
+            <p class="text-sm text-muted max-w-md leading-relaxed">实时查看全球 232 个国家和地区的当地时间与天气。</p>
         </div>
         <div class="text-sm text-muted md:text-right">
             <p>工作状态按当地时间 9:00–18:00 判定</p>
@@ -4769,7 +4769,7 @@
 <script>
     const weatherConfig = { weatherApiUrl: "https://api.open-meteo.com/v1/forecast" };
 
-    // 全球 210 个国家和地区，按大洲与次区域组织
+    // 全球 232 个国家和地区，按大洲与次区域组织
     const worldData = [
         // —— 亚洲 · 东亚 (8)
         { country: "中国", countryEn: "China", countryCode: "86", region: "eastAsia", cities: [{ name: "北京", nameEn: "Beijing", utcOffset: 8, lat: 39.91, lon: 116.39 }] },
@@ -4840,6 +4840,9 @@
         { country: "卢森堡", countryEn: "Luxembourg", countryCode: "352", region: "westernEurope", cities: [{ name: "卢森堡市", nameEn: "Luxembourg City", utcOffset: 2, lat: 49.61, lon: 6.13 }] },
         { country: "爱尔兰", countryEn: "Ireland", countryCode: "353", region: "westernEurope", cities: [{ name: "都柏林", nameEn: "Dublin", utcOffset: 1, lat: 53.35, lon: -6.26 }] },
         { country: "摩纳哥", countryEn: "Monaco", countryCode: "377", region: "westernEurope", cities: [{ name: "摩纳哥", nameEn: "Monaco", utcOffset: 2, lat: 43.73, lon: 7.42 }] },
+        { country: "马恩岛", countryEn: "Isle of Man", countryCode: "44", region: "westernEurope", cities: [{ name: "道格拉斯", nameEn: "Douglas", utcOffset: 1, lat: 54.15, lon: -4.48 }] },
+        { country: "泽西岛", countryEn: "Jersey", countryCode: "44", region: "westernEurope", cities: [{ name: "圣赫利尔", nameEn: "Saint Helier", utcOffset: 1, lat: 49.19, lon: -2.10 }] },
+        { country: "根西岛", countryEn: "Guernsey", countryCode: "44", region: "westernEurope", cities: [{ name: "圣彼得港", nameEn: "Saint Peter Port", utcOffset: 1, lat: 49.45, lon: -2.54 }] },
 
         // —— 欧洲 · 中欧 (4)
         { country: "德国", countryEn: "Germany", countryCode: "49", region: "centralEurope", cities: [{ name: "柏林", nameEn: "Berlin", utcOffset: 2, lat: 52.52, lon: 13.4 }] },
@@ -4853,6 +4856,8 @@
         { country: "芬兰", countryEn: "Finland", countryCode: "358", region: "northernEurope", cities: [{ name: "赫尔辛基", nameEn: "Helsinki", utcOffset: 3, lat: 60.17, lon: 24.94 }] },
         { country: "丹麦", countryEn: "Denmark", countryCode: "45", region: "northernEurope", cities: [{ name: "哥本哈根", nameEn: "Copenhagen", utcOffset: 2, lat: 55.68, lon: 12.57 }] },
         { country: "冰岛", countryEn: "Iceland", countryCode: "354", region: "northernEurope", cities: [{ name: "雷克雅未克", nameEn: "Reykjavik", utcOffset: 0, lat: 64.13, lon: -21.82 }] },
+        { country: "法罗群岛", countryEn: "Faroe Islands", countryCode: "298", region: "northernEurope", cities: [{ name: "托尔斯港", nameEn: "Tórshavn", utcOffset: 1, lat: 62.01, lon: -6.77 }] },
+        { country: "奥兰群岛", countryEn: "Åland Islands", countryCode: "358", region: "northernEurope", cities: [{ name: "玛丽港", nameEn: "Mariehamn", utcOffset: 3, lat: 60.10, lon: 19.93 }] },
 
         // —— 欧洲 · 南欧 (15)
         { country: "意大利", countryEn: "Italy", countryCode: "39", region: "southernEurope", cities: [{ name: "罗马", nameEn: "Rome", utcOffset: 2, lat: 41.90, lon: 12.50 }] },
@@ -4870,6 +4875,7 @@
         { country: "北马其顿", countryEn: "North Macedonia", countryCode: "389", region: "southernEurope", cities: [{ name: "斯科普里", nameEn: "Skopje", utcOffset: 2, lat: 41.99, lon: 21.43 }] },
         { country: "安道尔", countryEn: "Andorra", countryCode: "376", region: "southernEurope", cities: [{ name: "安道尔城", nameEn: "Andorra la Vella", utcOffset: 2, lat: 42.51, lon: 1.52 }] },
         { country: "圣马力诺", countryEn: "San Marino", countryCode: "378", region: "southernEurope", cities: [{ name: "圣马力诺", nameEn: "San Marino", utcOffset: 2, lat: 43.94, lon: 12.45 }] },
+        { country: "直布罗陀", countryEn: "Gibraltar", countryCode: "350", region: "southernEurope", cities: [{ name: "直布罗陀", nameEn: "Gibraltar", utcOffset: 2, lat: 36.14, lon: -5.35 }] },
 
         // —— 欧洲 · 东欧 (13)
         { country: "俄罗斯", countryEn: "Russia", countryCode: "7", region: "easternEurope", cities: [{ name: "莫斯科", nameEn: "Moscow", utcOffset: 3, lat: 55.76, lon: 37.62 }] },
@@ -4890,6 +4896,7 @@
         { country: "美国", countryEn: "United States", countryCode: "1", region: "northAmerica", cities: [{ name: "华盛顿", nameEn: "Washington D.C.", utcOffset: -4, lat: 38.9, lon: -77.04 }] },
         { country: "加拿大", countryEn: "Canada", countryCode: "1", region: "northAmerica", cities: [{ name: "渥太华", nameEn: "Ottawa", utcOffset: -4, lat: 45.42, lon: -75.69 }] },
         { country: "格陵兰", countryEn: "Greenland", countryCode: "299", region: "northAmerica", cities: [{ name: "努克", nameEn: "Nuuk", utcOffset: -3, lat: 64.18, lon: -51.72 }] },
+        { country: "圣皮埃尔和密克隆", countryEn: "Saint Pierre and Miquelon", countryCode: "508", region: "northAmerica", cities: [{ name: "圣皮埃尔", nameEn: "Saint-Pierre", utcOffset: -2, lat: 46.78, lon: -56.17 }] },
 
         // —— 北美洲 · 中美洲 (8)
         { country: "墨西哥", countryEn: "Mexico", countryCode: "52", region: "centralAmerica", cities: [{ name: "墨西哥城", nameEn: "Mexico City", utcOffset: -5, lat: 19.43, lon: -99.13 }] },
@@ -4918,6 +4925,18 @@
         { country: "波多黎各", countryEn: "Puerto Rico", countryCode: "1", region: "caribbean", cities: [{ name: "圣胡安", nameEn: "San Juan", utcOffset: -4, lat: 18.47, lon: -66.11 }] },
         { country: "百慕大", countryEn: "Bermuda", countryCode: "1", region: "caribbean", cities: [{ name: "汉密尔顿", nameEn: "Hamilton", utcOffset: -4, lat: 32.29, lon: -64.78 }] },
         { country: "开曼群岛", countryEn: "Cayman Islands", countryCode: "1", region: "caribbean", cities: [{ name: "乔治敦", nameEn: "George Town", utcOffset: -5, lat: 19.29, lon: -81.37 }] },
+        { country: "阿鲁巴", countryEn: "Aruba", countryCode: "297", region: "caribbean", cities: [{ name: "奥拉涅斯塔德", nameEn: "Oranjestad", utcOffset: -4, lat: 12.52, lon: -70.04 }] },
+        { country: "库拉索", countryEn: "Curaçao", countryCode: "599", region: "caribbean", cities: [{ name: "威廉斯塔德", nameEn: "Willemstad", utcOffset: -4, lat: 12.11, lon: -68.93 }] },
+        { country: "圣马丁", countryEn: "Sint Maarten", countryCode: "1721", region: "caribbean", cities: [{ name: "菲利普斯堡", nameEn: "Philipsburg", utcOffset: -4, lat: 18.03, lon: -63.05 }] },
+        { country: "圣巴泰勒米", countryEn: "Saint Barthélemy", countryCode: "590", region: "caribbean", cities: [{ name: "居斯塔维亚", nameEn: "Gustavia", utcOffset: -4, lat: 17.90, lon: -62.85 }] },
+        { country: "美属维尔京群岛", countryEn: "U.S. Virgin Islands", countryCode: "1340", region: "caribbean", cities: [{ name: "夏洛特阿马利亚", nameEn: "Charlotte Amalie", utcOffset: -4, lat: 18.34, lon: -64.93 }] },
+        { country: "英属维尔京群岛", countryEn: "British Virgin Islands", countryCode: "1284", region: "caribbean", cities: [{ name: "罗德城", nameEn: "Road Town", utcOffset: -4, lat: 18.43, lon: -64.62 }] },
+        { country: "安圭拉", countryEn: "Anguilla", countryCode: "1264", region: "caribbean", cities: [{ name: "瓦利", nameEn: "The Valley", utcOffset: -4, lat: 18.22, lon: -63.06 }] },
+        { country: "蒙特塞拉特", countryEn: "Montserrat", countryCode: "1664", region: "caribbean", cities: [{ name: "普利茅斯", nameEn: "Plymouth", utcOffset: -4, lat: 16.79, lon: -62.21 }] },
+        { country: "特克斯和凯科斯群岛", countryEn: "Turks and Caicos Islands", countryCode: "1649", region: "caribbean", cities: [{ name: "科伯恩城", nameEn: "Cockburn Town", utcOffset: -4, lat: 21.47, lon: -71.14 }] },
+        { country: "马提尼克", countryEn: "Martinique", countryCode: "596", region: "caribbean", cities: [{ name: "法兰西堡", nameEn: "Fort-de-France", utcOffset: -4, lat: 14.61, lon: -61.06 }] },
+        { country: "瓜德罗普", countryEn: "Guadeloupe", countryCode: "590", region: "caribbean", cities: [{ name: "巴斯特尔", nameEn: "Basse-Terre", utcOffset: -4, lat: 16.00, lon: -61.73 }] },
+        { country: "法属圣马丁", countryEn: "Saint Martin", countryCode: "590", region: "caribbean", cities: [{ name: "马里戈", nameEn: "Marigot", utcOffset: -4, lat: 18.07, lon: -63.08 }] },
 
         // —— 南美洲 (13)
         { country: "巴西", countryEn: "Brazil", countryCode: "55", region: "southAmerica", cities: [{ name: "巴西利亚", nameEn: "Brasília", utcOffset: -3, lat: -15.79, lon: -47.86 }] },
@@ -4933,6 +4952,7 @@
         { country: "圭亚那", countryEn: "Guyana", countryCode: "592", region: "southAmerica", cities: [{ name: "乔治敦", nameEn: "Georgetown", utcOffset: -4, lat: 6.80, lon: -58.16 }] },
         { country: "苏里南", countryEn: "Suriname", countryCode: "597", region: "southAmerica", cities: [{ name: "帕拉马里博", nameEn: "Paramaribo", utcOffset: -3, lat: 5.86, lon: -55.17 }] },
         { country: "法属圭亚那", countryEn: "French Guiana", countryCode: "594", region: "southAmerica", cities: [{ name: "卡宴", nameEn: "Cayenne", utcOffset: -3, lat: 4.93, lon: -52.31 }] },
+        { country: "福克兰群岛", countryEn: "Falkland Islands", countryCode: "500", region: "southAmerica", cities: [{ name: "斯坦利", nameEn: "Stanley", utcOffset: -3, lat: -51.70, lon: -57.85 }] },
 
         // —— 非洲 · 北非 (5)
         { country: "埃及", countryEn: "Egypt", countryCode: "20", region: "northAfrica", cities: [{ name: "开罗", nameEn: "Cairo", utcOffset: 2, lat: 30.04, lon: 31.24 }] },
@@ -4958,6 +4978,7 @@
         { country: "佛得角", countryEn: "Cape Verde", countryCode: "238", region: "westAfrica", cities: [{ name: "普拉亚", nameEn: "Praia", utcOffset: -1, lat: 14.92, lon: -23.51 }] },
         { country: "尼日尔", countryEn: "Niger", countryCode: "227", region: "westAfrica", cities: [{ name: "尼亚美", nameEn: "Niamey", utcOffset: 1, lat: 13.51, lon: 2.11 }] },
         { country: "毛里塔尼亚", countryEn: "Mauritania", countryCode: "222", region: "westAfrica", cities: [{ name: "努瓦克肖特", nameEn: "Nouakchott", utcOffset: 0, lat: 18.08, lon: -15.98 }] },
+        { country: "圣多美和普林西比", countryEn: "São Tomé and Príncipe", countryCode: "239", region: "westAfrica", cities: [{ name: "圣多美", nameEn: "São Tomé", utcOffset: 0, lat: 0.34, lon: 6.73 }] },
 
         // —— 非洲 · 中非 (8)
         { country: "刚果（金）", countryEn: "Democratic Republic of the Congo", countryCode: "243", region: "centralAfrica", cities: [{ name: "金沙萨", nameEn: "Kinshasa", utcOffset: 1, lat: -4.32, lon: 15.31 }] },
@@ -4997,6 +5018,7 @@
         { country: "博茨瓦纳", countryEn: "Botswana", countryCode: "267", region: "southernAfrica", cities: [{ name: "哈博罗内", nameEn: "Gaborone", utcOffset: 2, lat: -24.65, lon: 25.91 }] },
         { country: "莱索托", countryEn: "Lesotho", countryCode: "266", region: "southernAfrica", cities: [{ name: "马塞卢", nameEn: "Maseru", utcOffset: 2, lat: -29.32, lon: 27.48 }] },
         { country: "斯威士兰", countryEn: "Eswatini", countryCode: "268", region: "southernAfrica", cities: [{ name: "姆巴巴内", nameEn: "Mbabane", utcOffset: 2, lat: -26.31, lon: 31.13 }] },
+        { country: "圣赫勒拿岛", countryEn: "Saint Helena", countryCode: "290", region: "southernAfrica", cities: [{ name: "詹姆斯敦", nameEn: "Jamestown", utcOffset: 0, lat: -15.93, lon: -5.72 }] },
 
         // —— 大洋洲 (21)
         { country: "澳大利亚", countryEn: "Australia", countryCode: "61", region: "oceania", cities: [{ name: "堪培拉", nameEn: "Canberra", utcOffset: 10, lat: -35.31, lon: 149.13 }] },
